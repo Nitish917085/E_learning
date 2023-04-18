@@ -1,8 +1,4 @@
-# Made by : Nitish Kumar Singh
-
 <h1>E-Learning Website</h1>
-
-> Website - (https://test2-production-c81c.up.railway.app/)
 
 <h2>Table of Contents</h2>
 
