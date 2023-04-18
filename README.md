@@ -24,7 +24,7 @@
 
 ![Add Product](./public/images/add.jpg)
 
-![Course Videos](https://drive.google.com/file/d/1fKR4rUrBE5B8euSes_-rtnlD6_cy82c0/view?usp=sharing)
+![Course Videos](https://drive.google.com/uc?export=view&id=1fKR4rUrBE5B8euSes_-rtnlD6_cy82c0)
 
 <h2>Description</h2>
 
