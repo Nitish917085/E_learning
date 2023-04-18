@@ -18,13 +18,11 @@
 
 <h2>Images</h2>
 
-![HomePage of Website](./public/images/home.jpg)
+![HomePage of Website](https://drive.google.com/uc?export=view&id=15XwzlHhrCDc8fZE0a0veMA8eIstD2ba_)
 
-![Sign In/Sign Up](./public/images/signin.jpg)
+![My Courses](https://drive.google.com/uc?export=view&id=1A5UUq2ZwsVdmI0CScu-co81C9RcM6aox)
 
-![Add Product](./public/images/add.jpg)
-
-![Course Videos](https://drive.google.com/uc?export=view&id=1fKR4rUrBE5B8euSes_-rtnlD6_cy82c0)
+![Course Videos](https://drive.google.com/uc?export=view&id=1YERUEtRcPCE5e3ldNy1hFjvxYDQf6Y3X)
 
 <h2>Description</h2>
 
