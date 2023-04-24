@@ -10,6 +10,14 @@ const {videos, topics,course}=require('./data');
 //const Course = require('./models/course');
 //const Videos=require('./models/videos')
 
+const corsOrigin ={
+  origin:'*', //or whatever port your frontend is using
+  credentials:true,            
+  optionSuccessStatus:200
+}
+app.use(express.json());
+app.use(cors(corsOrigin))
+
 
 main().catch(err => console.log(err));
 main().then(err=>{
@@ -19,11 +27,11 @@ main().then(err=>{
   //Topics.insertMany(topics);  
 })
 async function main() {
-  await mongoose.connect('mongodb+srv://immcrutas:HQx7FG8doavSpbDc@cluster0.f93y4ir.mongodb.net/imarticus?retryWrites=true&w=majority');
+  await mongoose.connect('mongodb+srv://immcrutas:V7e2nIpsXfiBe2MK@cluster0.f93y4ir.mongodb.net/imarticus?retryWrites=true&w=majority');
 }
-app.use(express.json());
+
 app.use(express.urlencoded({extended:true}))
-app.use(cors())
+
 app.use('/',routes);
 
 const PORT=process.env.PORT|| 5000;
