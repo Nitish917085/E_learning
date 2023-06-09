@@ -9,7 +9,6 @@ const {videos, topics,course}=require('./data');
 //const Videos = require('./models/videos');
 //const Course = require('./models/course');
 //const Videos=require('./models/videos')
-
 const corsOrigin ={
   origin:'*', //or whatever port your frontend is using
   credentials:true,            
@@ -17,7 +16,6 @@ const corsOrigin ={
 }
 app.use(express.json());
 app.use(cors(corsOrigin))
-
 
 main().catch(err => console.log(err));
 main().then(err=>{
@@ -29,10 +27,8 @@ main().then(err=>{
 async function main() {
   await mongoose.connect('mongodb+srv://immcrutas:V7e2nIpsXfiBe2MK@cluster0.f93y4ir.mongodb.net/imarticus?retryWrites=true&w=majority');
 }
-
-app.use(express.urlencoded({extended:true}))
-
-app.use('/',routes);
+//app.use(express.urlencoded({extended:true}))
+app.use('/', routes);
 
 const PORT=process.env.PORT|| 5000;
 app.listen(PORT,()=>console.log('server started'));
