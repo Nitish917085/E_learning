@@ -8,6 +8,13 @@ router.post('/register', async (req, res) => {
   console.log('reg',req.body)
   try {
     console.log(req.body);
+
+    if( await User.findOne({username: req.body.username}) )
+       return res.json({error:"username already exist"})
+
+    if(await User.findOne({email: req.body.email }))
+      return  res.json({error:"email already exist"})
+   
     const newUser = await User.create({
       username: req.body.username,
       email: req.body.email,
@@ -38,13 +45,11 @@ router.post('/login', async (req, res) => {
     const user = await User.findOne({ email: email }).select('+password');
     console.log(user);
     if (!user) {
-      return res.status(404)
-        .send('No user found! Please check your credentials!');
+      return res.json({error:'No user found! Please check your credentials!'});
     }
 
     if (!(await user.checkPassword(req.body.password, user.password))) {
-      return res.status(401)
-        .send('Password is not matched! Please check your credentials!');
+      return res.json({error:'Password is not matched! Please check your credentials!'});
     }
     const token = jwt.sign(
       {

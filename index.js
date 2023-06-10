@@ -4,6 +4,7 @@ const cors=require('cors');
 const mongoose = require('mongoose');
 const routes=require('./routes')
 const {videos, topics,course}=require('./data');
+const { verifyToken } = require('./middleware/authMiddleware');
 //const Topics = require('./models/topics');
 // const Topics=require('./models/topics');
 //const Videos = require('./models/videos');
