@@ -24,7 +24,7 @@ router.get('/' ,async (req,res)=>{
     }}
 })
 
-router.post('/course',verifyToken, async(req,res)=>{
+router.post('/course', async(req,res)=>{
    console.log('course',req.body);
     try{
         const id = req.body.course_id;
